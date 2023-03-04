@@ -19,7 +19,7 @@ RUN PIPENV_VENV_IN_PROJECT=1 pipenv install --deploy --skip-lock
 ENV PATH="/code/.venv/bin:$PATH"
 
 COPY ./src /code/src
-COPY ./data/model/memento.h5 /code/data/model/memento.h5
+COPY ./model/memento.h5 /code/model/memento.h5
 ENV ENABLE_METRICS=true
 CMD ["uvicorn", "src.app.main:app", "--host", "0.0.0.0", "--port", "8080"]
 EXPOSE 8080
