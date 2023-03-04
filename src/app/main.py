@@ -54,10 +54,10 @@ app.add_middleware(
     expose_headers=['X-predicted-probability']
 )
 
-@app.on_event("startup")
+""" @app.on_event("startup")
 async def startup_event():
     instrumentator.instrument(app).expose(
-        app, include_in_schema=False, should_gzip=True)
+        app, include_in_schema=False, should_gzip=True) """
 
 
 @app.post("/predict")
