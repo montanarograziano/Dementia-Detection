@@ -14,9 +14,10 @@ from starlette.middleware.cors import CORSMiddleware
 
 from ..experiment.images2frames import normalize, resize_to_input_shape
 from . import __version__
+
 #from .monitoring import instrumentator
 
-model = tf.keras.models.load_model('/model/memento.h5')
+model = tf.keras.models.load_model('../../model/memento.h5')
 
 
 class PredictionFormatEnum(str, enum.Enum):
