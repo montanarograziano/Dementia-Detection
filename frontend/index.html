@@ -125,13 +125,14 @@
 					of being affected by Dementia.</p>
 			</div>
 			<div class="row justify-content-md-center">
-				<form class="form-inline" method="post" action="http://api.mementoai.software/predict/" id="predict-form"
-					enctype="multipart/form-data">
+				<form class="form-inline" method="post" action="https://memento-ai.up.railway.app/predict"
+					id="predict-form" enctype="multipart/form-data">
 					<div class="row justify-content-md-center mb-5">
 						<div class="col-md-4 col-sm-4 mb-2">
 							<div class="form-group">
 								<label for="frame" class="form-label">Select your image</label>
-								<input type="file" accept="image/png" class="form-control" id="frame" name="image" required>
+								<input type="file" accept="image/png" class="form-control" id="frame" name="image"
+									required>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4 mb-2">
@@ -152,9 +153,9 @@
 
 				</form>
 			</div>
-            <div class="row justify-content-center">
-                <div id="results" class="text-start col-6 row justify-content-center"></div>
-            </div>
+			<div class="row justify-content-center">
+				<div id="results" class="text-start col-6 row justify-content-center"></div>
+			</div>
 		</section>
 
 		<section id="report" class="text-center py-5 px-3 bg-light">
@@ -165,7 +166,7 @@
 	</main>
 	<footer role="contentinfo" class="text-light text-center footer pt-5 pb-3">
 		<p>
-            Memento, version <code>__VERSION__</code>.
+			Memento, version <code>__VERSION__</code>.
 			For more information check the
 			<a href="https://github.com/se4ai2122-cs-uniba/Dementia-Detection" class="text-white" target="_blank"
 				rel="noopener noreferrer">
