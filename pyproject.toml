@@ -1,0 +1,40 @@
+[project]
+name = "Dementia-Detection"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "montanarograziano", email = "graziano.montanaro98@gmail.com"},
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "pyyaml",
+    "scipy",
+    "nibabel",
+    "fastapi[all]",
+    "python-multipart",
+    "opencv-python",
+    "tensorflow",
+    "prometheus-fastapi-instrumentator",
+    "prometheus-client",
+]
+requires-python = "<3.11,>=3.9"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[[tool.pdm.source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "autopep8",
+    "pytest",
+    "pytest-cov",
+    "pylint",
+]
