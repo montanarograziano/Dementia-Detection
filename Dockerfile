@@ -21,5 +21,5 @@ ENV PATH="/code/.venv/bin:$PATH"
 COPY ./src /code/src
 COPY ./model/memento.h5 /code/model/memento.h5
 ENV ENABLE_METRICS=true
-CMD ["uvicorn", "src.app.main:app", "--host", "0.0.0.0", "--port", "8080"]
-EXPOSE 8080
+CMD ["uvicorn", "src.app.main:app", "--host", "0.0.0.0", "--port", "7860"]
+# EXPOSE 8080
