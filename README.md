@@ -1,10 +1,14 @@
 ---
 title: Dementia-Detection
+emoji: 🧠
 colorFrom: blue
 colorTo: green
 sdk: streamlit
-app_file: demo/demos_streamlit.py
-pinned: false
+sdk_version: 1.16.0
+app_file: demo/demo_streamlit.py
+pinned: true
+license: agpl-3.0
+short_description: Demo of MEMENTO model for Alzheimer's Detection through PET.
 ---
 
 <div align="center">

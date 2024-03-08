@@ -92,5 +92,4 @@ def main():
         github_section()
 
 
-if __name__ == "__main__":
-    main()
+main()
