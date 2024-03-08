@@ -15,6 +15,11 @@ opencv-python = "*"
 tensorflow = "*"
 prometheus-fastapi-instrumentator = "*"
 prometheus_client = "*"
+ruff = "*"
+pillow = "*"
+gradio = "*"
+streamlit = "*"
+watchdog = "*"
 
 [dev-packages]
 autopep8 = "*"
