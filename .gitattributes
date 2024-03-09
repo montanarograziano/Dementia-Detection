@@ -1,2 +1,7 @@
 model/memento.h5 filter=lfs diff=lfs merge=lfs -text
 model/pet.h5 filter=lfs diff=lfs merge=lfs -text
+model/pet-3d.h5 filter=lfs diff=lfs merge=lfs -text
+model/mri-3d.h5 filter=lfs diff=lfs merge=lfs -text
+model/merged.h5 filter=lfs diff=lfs merge=lfs -text
+data/sample-mri.npy filter=lfs diff=lfs merge=lfs -text
+data/sample-pet.npy filter=lfs diff=lfs merge=lfs -text
