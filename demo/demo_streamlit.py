@@ -1,3 +1,5 @@
+import io
+
 import numpy as np
 import streamlit as st
 from tensorflow import keras
@@ -48,13 +50,18 @@ def preprocess_image(img_array):
 def download_sample_files():
     pet_sample_path = "data/sample-pet.npy"
     mri_sample_path = "data/sample-mri.npy"
+    with io.BytesIO() as output:
+        np.save(output, np.load(pet_sample_path))
 
-    st.download_button(
-        "Download sample PET", data=pet_sample_path, file_name="sample-pet.npy"
-    )
-    st.download_button(
-        "Download sample MRI", data=mri_sample_path, file_name="sample-mri.npy"
-    )
+        st.download_button(
+            "Download sample PET", data=output, file_name="sample-pet.npy"
+        )
+    with io.BytesIO() as output:
+        np.save(output, np.load(mri_sample_path))
+
+        st.download_button(
+            "Download sample MRI", data=output, file_name="sample-mri.npy"
+        )
 
 
 def about_section():
@@ -105,7 +112,6 @@ def main():
     )
 
     if selected_page == "Try the tool!":
-        # st.title("MEMENTO")
         st.title("Automated detection of Alzheimer's Disease through PET and MRI scans")
         st.write(
             "Select a model from the dropdown menu and upload the corresponding image(s)."
@@ -117,12 +123,14 @@ def main():
         selected_model_name = st.selectbox(
             "Select Model", ["MEMENTO-3D-MRI", "MEMENTO-3D-PET", "MEMENTO-MULTIMODAL"]
         )
+        scan_type: str = "PET" if "PET" in selected_model_name else "MRI"
 
         # Select the appropriate model based on the user's choice
         selected_model = select_model(selected_model_name)
 
         uploaded_file_1 = st.file_uploader(
-            "Upload 3D MRI Scan: allowed dimension is (128x128x128)", type=["npy"]
+            f"Upload 3D {scan_type} Scan: allowed dimension is (128x128x128)",
+            type=["npy"],
         )
         uploaded_file_2 = None
         img_array_2 = None
