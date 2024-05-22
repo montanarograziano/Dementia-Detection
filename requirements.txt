@@ -1,5 +1,5 @@
 Pillow
-tensorflow
+tensorflow==2.15.0
 streamlit
 numpy
 altair<5
