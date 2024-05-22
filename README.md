@@ -28,6 +28,10 @@ short_description: Demo of MEMENTO model for Alzheimer's Detection through PET.
 </div>
 
 
+## Demo
+You can find a demo of the project hosted on Hugging Faces Spaces [here](https://huggingface.co/spaces/montanarograziano/Dementia-Detection)
+
+
 ## License
 
 The entire content of this repository is released as free (as in "libre") under
